@@ -1,13 +1,10 @@
 public class Car{
-// TODO: Define instance variables (attributes):
 String brand;
 String model;
 int year;
 String color;
 boolean isrunning ;
 
-
-// TODO: Create a constructor that initializes all attributes
 public Car(String brand,String model,int year,String color,boolean isrunning){
     this.brand = brand;
     this.model=model;
@@ -15,7 +12,6 @@ public Car(String brand,String model,int year,String color,boolean isrunning){
     this.color=color;
     this.isrunning= false;
 }
-// TODO: Create instance methods:
 public void startengine(){
     if(!isrunning){
         isrunning = true;
@@ -44,11 +40,6 @@ public void displayInfo() {
 public int getAge(int currentYear) {
         return currentYear - year;
     }
-
-// startEngine() sets isRunning to true, prints message
-//sets isRunning to false, prints message // - stopEngine()
-//displayInfo() prints all car information
-// getAge() returns current year minus car year
 public static void main(String[] args) {
         Car car1 = new Car("Toyota", "Corolla", 2015, "White",false);
         Car car2 = new Car("Honda", "Civic", 2018, "Black",false);
@@ -67,12 +58,5 @@ public static void main(String[] args) {
         car3.startengine();
         car3.stopEngine();
         System.out.println("Age of " + car3.brand + ": " + car3.getAge(2025) + " years\n");
-
-
-// TODO: Create 3 different Car objects with different attributes
-// TODO: Demonstrate calling methods on each object
-// TODO: Show how each object maintains its own state
-// TODO: Explain in comments: How is this similar to real-world
-
 }
 }
